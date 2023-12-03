@@ -1,4 +1,4 @@
-import { getLista } from "./lista";
+import { adicionaNaLista, getLista, limpaLista } from "./lista";
 
 function criaElementoNaLista(){
     const texto = pEntrada.textContent;
@@ -7,7 +7,10 @@ function criaElementoNaLista(){
     pEntrada.textContent="";
     pEntrada.focus();
 }
-
+function limparElementosDaLista(){
+    limpaLista();
+    atualizarItensDeLista();
+}
 
 function atualizarItensDeLista(){
     olSaida.innerHTML = "";
