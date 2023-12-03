@@ -1,4 +1,8 @@
-import { adicionaNaLista, getLista, limpaLista } from "./lista";
+import { adicionaNaLista, getLista, limpaLista, removeDaLista } from "./lista";
+
+const pEntrada = document.querySelector('#entrada');
+const olSaida = document.querySelector('#itens');
+const bntAdicionar = document.querySelector('#adicionar');
 
 function criaElementoNaLista(){
     const texto = pEntrada.textContent;
