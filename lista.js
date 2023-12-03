@@ -4,3 +4,6 @@ export function getLista(){
     return lista;
 }
 
+export function adicionanaLista(novoitem){
+    lista.push(novoitem);
+}
