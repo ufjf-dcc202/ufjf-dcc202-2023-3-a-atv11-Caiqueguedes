@@ -1,8 +1,16 @@
-import { adicionaNaLista, getLista, limpaLista, removeDaLista } from "./lista";
+import { adicionaNaLista, getLista, limpaLista, removeDaLista } from "./lista.js";
 
 const pEntrada = document.querySelector('#entrada');
 const olSaida = document.querySelector('#itens');
 const bntAdicionar = document.querySelector('#adicionar');
+const btnLimpar = document.querySelector('#limpar');
+const btnRemover = document.querySelector('#remover');
+
+btnLimpar.addEventListener('click', limparElementosDaLista);
+bntAdicionar.addEventListener('click', criaElementoNaLista);
+btnRemover.addEventListener('click', removeDaLista);
+
+atualizarItensDeLista();
 
 function criaElementoNaLista(){
     const texto = pEntrada.textContent;
@@ -24,4 +32,8 @@ function atualizarItensDeLista(){
      const li = document.createElement("li");
      olSaida.appendChild(li);   
     }
+}
+function removeDaLista(){
+    removeDaLista();
+    atualizarItensDeLista();
 }
